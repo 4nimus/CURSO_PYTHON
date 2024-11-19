@@ -9,4 +9,3 @@ print(f'Cadena en minusculas: {minisculas}') #convertir a minusculas
 cadena2 = ' Juan perez'
 print(f'Cadena con espacios: {cadena2}')
 print(f'Cadena sin espacios: {cadena2.strip()}') #Eliminar espacios al incio y al final
-
