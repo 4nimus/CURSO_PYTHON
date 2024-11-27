@@ -19,4 +19,21 @@
 print(f'***** Sistema Generador de IT UNICO *****')
 nombre = input('Favor intruducir su nombre: ')
 apellido = input('Favor intruducir su apellido: ')
-año_nacimiento = int(input('Favor intruducir su año de nacimiento: '))
+año_nacimiento =    |input('Favor intruducir su año de nacimiento (YYYY): ')
+
+#Se convierte el nombre a mayusculas y se toman las 2 primeras
+nombre_id = nombre[:2].upper()
+#Se convierte el apellido a mayusculas y se toman las 2 primeras
+apellido_id = apellido[:2].upper()
+#Se toman los 2 ultimos digitos del año de nacimiento
+año_id = str(año_nacimiento)[-2:]
+#Se genera un valor aleatorio de 4 digitos
+import random
+valor_aleatorio = random.randint(1000, 9999)
+#Se unen los valores para generar el id unico
+id_unico = nombre_id + apellido_id + año_id + str(valor_aleatorio)
+
+print(f'''Hola juan
+      El id unico generado para ti es: {id_unico}
+      Felicidades
+''')
