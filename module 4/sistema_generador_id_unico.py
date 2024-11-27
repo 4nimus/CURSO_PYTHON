@@ -19,7 +19,7 @@
 print(f'***** Sistema Generador de IT UNICO *****')
 nombre = input('Favor intruducir su nombre: ')
 apellido = input('Favor intruducir su apellido: ')
-año_nacimiento =    |input('Favor intruducir su año de nacimiento (YYYY): ')
+año_nacimiento = input('Favor intruducir su año de nacimiento (YYYY): ')
 
 #Se convierte el nombre a mayusculas y se toman las 2 primeras
 nombre_id = nombre[:2].upper()
