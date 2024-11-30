@@ -1,13 +1,13 @@
 #Operadores Aritmeticos
 
 print(f'Calculadora')
-print(f'''OPERADRRES
-        + = SUMA
-        - = RESTA
-        * = MULTIPLICACIÓN
-        / = DIVISIÓN''')
 a = int(input('Primero digito: '))
-c = input('OPERADOR ARITMETICO:')
 b = int(input('Segundo digito: '))
-print (f'Su el resultado de {a} {c} {b}')
 
+print(f'Suma: {a + b}')
+print(f'Resta: {a - b}')
+print(f'Multiplicacion: {a * b}')
+print(f'Division: {a / b:2f}')
+print(f'Division Entera: {a // b}')
+print(f'Modulo: {a % b}')
+print(f'Potencia: {a ** b}')
