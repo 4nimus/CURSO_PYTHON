@@ -11,3 +11,4 @@ print(f'Division: {a / b:2f}')
 print(f'Division Entera: {a // b}')
 print(f'Modulo: {a % b}')
 print(f'Potencia: {a ** b}')
+
