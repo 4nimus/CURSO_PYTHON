@@ -10,9 +10,8 @@ numero2 = float(input('Favor digitar otro numero: '))
 
 resultado = numero1 if numero1 > numero2 else numero2
 if numero1 > numero2 and numero2 < numero1:
-    print(f'El valor {numero1} es el numero mayor')
+    print(f'El primero valor {numero1} es el numero mayor')
 elif numero2 > numero1 and numero1 < numero2:
-    print(f'El valor {numero2} es el numero mayor')
+    print(f'El segundo valor {numero2} es el numero mayor')
 else:
     print(f'El valor {numero1} y {numero2} son valores iguales')
-    
