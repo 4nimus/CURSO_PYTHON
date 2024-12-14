@@ -11,9 +11,7 @@
 print('****Sistema de Envio****')
 
 #Envio Nacional e internacional
-
-
-paquete = int(input('Favor indicar el peso del paquete que esta llevando: '))
+paquete = int(input('Favor indicar el peso del paquete que esta llevando en KG: '))
 tipo_envio = str(input('Favor indicar si su viaje es Nacional o Internacional: '))
 costo = 10 if tipo_envio.lower().strip() == 'nacinal' else 20
 internacional = 20
@@ -21,12 +19,12 @@ internacional = 20
 if tipo_envio.lower().strip() == 'nacional':
     print(f'''
           
-Su paquete tiene un peso de {paquete}
+Su paquete tiene un peso de {paquete} KG
 Y quiere un envio {tipo_envio.strip().lower()} el cual posee un costo de {costo}''')
     print(f'El mismo tendra un costo de {paquete * costo}')
 else:
     print(f'''
           
-Su paquete tiene un peso de {paquete}
+Su paquete tiene un peso de {paquete} KG
 Y quiere un envio {tipo_envio.strip().lower()}''')
     print(f'El mismo tendra un costo de {paquete * costo} el cual posee un costo de {costo}')
