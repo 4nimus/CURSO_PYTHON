@@ -22,29 +22,29 @@ while not salir:
     opcion = int(input('ESCOJA UNA OPCIÓN: '))
     #suma
     if opcion == 1:
-        operador1 = int(input('Favor digitar valor 1: '))
-        operador2 = int(input('Favor digitar valor 2: '))
+        operador1 = float(input('Favor digitar valor 1: '))
+        operador2 = float(input('Favor digitar valor 2: '))
         resultado = operador1 + operador2
         print(f'{operador1} + {operador2} = {resultado}')
 
     #resta
     elif opcion == 2:
-        operador1 = int(input('Favor digitar valor 1: '))
-        operador2 = int(input('Favor digitar valor 2: '))
+        operador1 = float(input('Favor digitar valor 1: '))
+        operador2 = float(input('Favor digitar valor 2: '))
         resultado = operador1 - operador2
         print(f'{operador1} - {operador2} = {resultado}')
 
     #multiplicación
     elif opcion == 3:
-        operador1 = int(input('Favor digitar valor 1: '))
-        operador2 = int(input('Favor digitar valor 2: '))
+        operador1 = float(input('Favor digitar valor 1: '))
+        operador2 = float(input('Favor digitar valor 2: '))
         resultado = operador1 * operador2
         print(f'{operador1} * {operador2} = {resultado}')
         
     #división
     elif opcion == 4:
-        operador1 = int(input('Favor digitar valor 1: '))
-        operador2 = int(input('Favor digitar valor 2: '))
+        operador1 = float(input('Favor digitar valor 1: '))
+        operador2 = float(input('Favor digitar valor 2: '))
         resultado = operador1 / operador2
         print(f'{operador1} / {operador2} = {resultado}')
 
