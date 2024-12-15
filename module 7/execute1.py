@@ -7,5 +7,5 @@ contador = 0
 i = 1
 while i <= 5:
     print(f'{contador} + {i} = {contador + i}')
-    contador = contador + i
+    contador += i
     i += 1 
