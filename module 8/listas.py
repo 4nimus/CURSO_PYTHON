@@ -21,3 +21,20 @@ print(f'{mi_lista} -> Se agrego el elemento 6')
 #Anadir un nuevo elemnto en un indice especifo
 mi_lista.insert(2, 15)
 print(f'{mi_lista} -> Se anadio el valor de 15')
+
+#Eliminar elementos de una lista
+#Usando el metodo remove
+mi_lista.remove(5)
+print(f'{mi_lista} -> Se removio el valor 5')
+
+#Removemos por indice con el metodo POP
+mi_lista.pop(1) 
+print(f'{mi_lista} -> Se elimino el indice 1')
+
+#Eliminar usando la palabra del
+del mi_lista[2]
+print(f'{mi_lista} -> Se elimino el indice 2')
+
+# Obtener sublistas
+sublista = mi_lista[1:3] #Genera una sublista del indice 1 al 2 (3 No se incluye)
+print(f'Sublista [1:3]: {sublista}')
