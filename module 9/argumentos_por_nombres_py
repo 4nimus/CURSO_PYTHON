@@ -1,0 +1,13 @@
+print('*** Funcion con argumentos por nombre ***')
+
+def imprimir_persona(nombre, apellido = '', edad = 0):
+    print(f'Persona: Nombre: {nombre}, Apellido: {apellido}, Edad: {edad}')
+
+#Primero llamamos la función pasando los argumentos de manera posicional
+imprimir_persona('Juan', 'Maracuy', 32)
+#Llamar la función usando argumentos por nombre
+imprimir_persona(nombre= 'Carlos', apellido='Petruchi', edad=232)
+#Llamar la función usando argumentos por nombre, pero intercambiamos el orden
+imprimir_persona(edad=23, apellido='Rojo', nombre='fuego')
+# Argumentos con valor por default
+imprimir_persona(nombre='vars')
