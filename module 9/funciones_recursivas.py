@@ -10,4 +10,4 @@ def funcion_recursiva(numero):
         print(numero, end= ' ')
 
 #Programa principal
-funcion_recursiva(5)
+funcion_recursiva(10)
