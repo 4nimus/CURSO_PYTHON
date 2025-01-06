@@ -11,11 +11,11 @@ def factorial(numero):
     resultado = None
     #CASO BASE
     if numero == 1:
-        resultado = numero * numero
+        resultado = numero * (numero - 1)
         print(resultado, end= '\n')
     else: #Caso recursivo
         factorial(numero - 1)
-        resultado = numero * numero
-        print(resultado, end= '\n')
+        resultado = numero * (numero - 1)
+        print(f'{numero} * {numero - 1}= {resultado}', end= '\n')
 
 factorial(10)
