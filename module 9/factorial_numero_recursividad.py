@@ -8,14 +8,13 @@ print('FACTORIAL DE UN NUMERO CON RECURSIVIDAD')
 
 #DEFINIR LA FUNCION RECURSIVA
 def factorial(numero):
-    resultado = 1
     #CASO BASE
-    if numero == 1:
-        print(f'{numero} * {resultado}= {resultado * numero}', end= '\n')
-        resultado = resultado * numero
+    if numero == 1 or numero == 0:
+        print(f'{numero}', end= '\n')
+        return 1
     else: #Caso recursivo
-        factorial(numero - 1)
-        print(f'{numero} * {resultado} = {resultado * numero}', end= '\n')
-        resultado = numero * resultado
+        factorial_parcial = numero * factorial(numero - 1)
+        print(f'{numero} * {factorial(numero - 1)} = {factorial_parcial}')
+        return factorial_parcial
 
 factorial(10)
