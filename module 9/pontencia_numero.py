@@ -5,7 +5,7 @@
 
 print(' **** POTENCIA ****')
 
-def potencia_numero(numero)
+def potencia_numero(numero):
     
     if numero == 0:
-        print
+        print(f'{numero}')
