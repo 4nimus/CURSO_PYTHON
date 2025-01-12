@@ -57,7 +57,7 @@ while True:
     elif opcion == '3':
         print('\n**** BUSCAR PRODUCTO ****')
         id = input('ingrese el producto a buscar: ')
-        if id in inventario:
+        if id in inventario.items():
             print('\n################################################\n')
             print(f'\nNombre: {inventario[id]["nombre"]}, Precio: {inventario["precio"]}, Cantidad: {inventario[id]["cantidad"]}')
             print('\n################################################\n')
