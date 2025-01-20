@@ -63,3 +63,18 @@ coche1.modelo = 'YARIS'
 coche1.color = 'amarillo'
 print(f'Atributo marca coche1: {coche1.marca}')
 coche1.conducir()
+
+#Intentar agregar un nuevo atributo
+setattr(coche1, 'nuevo_atributo', 'valor nuevo atributo')
+coche1.nuevo_atributo2 = 'Valor nuevo atributo 2'
+print(f'Atributos del coche1: {coche1.__dict__}')
+coche1.conducir()
+print(coche1.nuevo_atributo)
+print(coche1.nuevo_atributo2)
+
+
+#segundo objeto
+coche2 = Coche('for', 'trax', 'blanco')
+coche2.conducir()
+print(f'Nuevo atributo coche2 {coche2.nuevo_atributo}')
+print(f'Nuevo atributo coche2 {coche2.nuevo_atributo2}')
