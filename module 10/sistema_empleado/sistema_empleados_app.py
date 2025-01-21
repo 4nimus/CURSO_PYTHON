@@ -1,5 +1,5 @@
-from sistema_empleado.empleado import Empleado
-from sistema_empleado.empresa import Empresa
+from empleado import Empleado
+from empresa import Empresa
 
 print ('*** Sistema de Empleados ***')
 
