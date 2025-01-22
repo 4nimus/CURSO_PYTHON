@@ -6,6 +6,7 @@ class Empleado:
         self. nombre = nombre
         self.departamento = departamento
         Empleado.contador_empleados += 1
+        self.id = Empleado.contador_empleados
 
 
     @classmethod
