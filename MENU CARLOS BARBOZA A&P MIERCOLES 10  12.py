@@ -6,6 +6,28 @@
 import os
 import re
 
+def crear_registro_txt(nombre_archivo,registro):
+
+        
+        escritura = open(nombre_archivo, 'a')
+        escritura.writelines('\n'+registro )
+        escritura.close()
+
+
+def crear_txt():
+    
+    nombre_archivo= 'REGISTROS.txt'
+
+    a = os.path.isfile(nombre_archivo)
+    
+    if os.path.exists(a) == True:
+        #print('Ya existe')
+        registro = input(f'Registro 1: ')
+        return crear_registro_txt(nombre_archivo, registro) 
+
+    elif os.path.exists(a) == False:
+        file = open(nombre_archivo, 'x')
+
 #OTRAS OPCIONES
 def salir_opciones_menu(opcion):
     input(f'PRECIONAR ENTER PARA SALIR DE LA OPCION {opcion}')
@@ -22,13 +44,7 @@ def MENU():
 #OM VARIABLE PARA IDENTIFICAR OPCION DE MENU
 def OM1():
     print("\n*****REGISTRO*******\n")
-
-    a = os.path.isfile('prueba.txt')
-    if os.path.exists('CURSO_PYTHON',a):
-        print('no existe')
-        #file = open('prueba.txt', 'x')
-    else:
-        print('archivo no existe')
+    crear_txt()
 
     salir_opciones_menu(seleccion)
 
