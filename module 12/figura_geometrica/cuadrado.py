@@ -7,3 +7,7 @@ class Cuadrado(FiguraGeometrica, Color):
         #super().__init__(lado, lado)
         FiguraGeometrica.__init__(self, lado, lado)
         Color.__init__(self, color)
+
+    def calcular_area(self):
+        area = self.alto * self.ancho
+        return area
