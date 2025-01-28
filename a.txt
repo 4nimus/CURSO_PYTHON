@@ -1,0 +1,49 @@
+{
+      "1": {
+            "nombre": "1",
+            "precio": 1.0,
+            "cantidad": 1
+      }
+}{
+      "2": {
+            "nombre": "2",
+            "precio": 2.0,
+            "cantidad": 2
+      }
+}{
+       "3": {
+              "nombre": "3",
+              "precio": 3.0,
+              "cantidad": 3
+       }
+}{
+       "4": {
+              "nombre": "4",
+              "precio": 4.0,
+              "cantidad": 4
+       }
+}{
+       "1": {
+              "nombre": "1",
+              "precio": 1.0,
+              "cantidad": 1
+       }
+}{
+       "6": {
+              "nombre": "6",
+              "precio": 6.0,
+              "cantidad": 6
+       }
+}{
+       "7": {
+              "nombre": "7",
+              "precio": 7.0,
+              "cantidad": 7
+       }
+}{
+       "7": {
+              "nombre": "7",
+              "precio": 7.0,
+              "cantidad": 7
+       }
+}
