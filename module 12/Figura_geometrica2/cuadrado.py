@@ -1,4 +1,4 @@
-from Figura_geometrica2 import FiguraGeometrica
+from FiguraGeometrica import FiguraGeometrica
 from color import Color
 
 class Cuadrado(FiguraGeometrica, Color):
