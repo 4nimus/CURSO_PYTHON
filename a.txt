@@ -46,4 +46,22 @@
               "precio": 7.0,
               "cantidad": 7
        }
+}{
+       "2": {
+              "nombre": "2",
+              "precio": 2.0,
+              "cantidad": 2
+       }
+}{
+       "3": {
+              "nombre": "3",
+              "precio": 3.0,
+              "cantidad": 3
+       }
+}{
+       "4": {
+              "nombre": "4",
+              "precio": 4.0,
+              "cantidad": 4
+       }
 }

@@ -40,10 +40,13 @@ def crear_registro_txt(nombre_archivo,registro):
 #################################################################################################################
 
 def agregar_registro(nombre_archivo):
+    
     while True:
         seguir_agregando = input(f'Quieres crear un registro nuevo en el ARCHIVO: {nombre_archivo} SI/NO?: ').lower().strip()
         registro = {}
+        contador = 0
         if seguir_agregando == 'si':
+                contador += 1
                 id = int(input('Digite el codigo del producto: '))
                 nombre = input('Digite nombre del producto: ').lower().strip()
                 precio = float(input('Digite precio del producto: '))
@@ -60,6 +63,31 @@ def agregar_registro(nombre_archivo):
             break
         else:
             print('INGRESE UNA OPCION VALIDA')
+
+##################################################################################################################
+#ORGANIZAR INFORMACIÓN DEL TXT CON JSON
+##################################################################################################################
+
+def organizar_informacion(nombre_archivo):
+    productos = {}
+    # Encuentra todos los bloques JSON usando expresiones regulares
+    import re
+    bloques = re.findall(r'\{.*?\}', nombre_archivo)  # Encuentra bloques {...}
+
+    for bloque in bloques:
+        try:
+            # Carga cada bloque como JSON usando la librería 'json'
+            producto = json.loads(bloque)
+            id_producto = producto.pop("id")  # Extrae y elimina el ID del producto
+            productos[id_producto] = producto
+            print(productos)
+
+        except json.JSONDecodeError as e:
+            print(f"Error al decodificar JSON: {e}. Bloque problemático: {bloque}")
+        except KeyError:
+            print(f"Error: No se encontró la clave 'id' en el bloque: {bloque}")
+    return productos
+
 
 ##################################################################################################################
 #SALIDA DE OPCINES
@@ -81,7 +109,7 @@ def usar(contenido, txt):
 ##################################################################################################################
 
 def MENU():
-    print("\t\tMENU CARLOS BARBOZA A&P MIERCOLES 10:00\n")
+    print("\t\tMENU\n")
     print("1. REGISTRO")
     print("2. CONSULTA")
     print("3. LISTADO")
@@ -138,14 +166,30 @@ def OM1():
         else:
             print('INGRESE UNA OPCION VALIDA')
 
-
 ####################################################################################################################
 #CONSULTA
 ##################################################################################################################
 
 def OM2():
     print("\n*******CONSULTA*******\n")
-    salir_opciones_menu(seleccion)
+    try:
+        with open("a.txt", "r") as archivo:
+            datos = archivo.read()
+    except FileNotFoundError:
+        print("El archivo no fue encontrado.")
+
+    cadena_json = json.dumps(datos, indent=4)  # Indentación para mejor legibilidad
+    print("Datos en formato JSON:\n", cadena_json)
+
+    datos_python = json.loads(cadena_json)
+    print("\nDatos en formato Python:\n", datos_python)
+    
+    # Acceder a los datos en Python
+    print("\nNombre:", datos_python["1"])
+
+
+
+    #salir_opciones_menu(seleccion)
 
 ##################################################################################################################
 #LISTADO
@@ -153,7 +197,9 @@ def OM2():
 
 def OM3():
     print("\n*******LISTADO*******\n")
-    salir_opciones_menu(seleccion)
+
+
+    #salir_opciones_menu(seleccion)
 
 ##################################################################################################################
 #MODIFICAR
