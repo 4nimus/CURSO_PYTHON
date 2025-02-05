@@ -2,8 +2,11 @@ from abc import ABC, abstractmethod
 
 class Pelicula():
     
-    def pelicula(self, nombre):
+    def __init__(self, nombre):
         self._nombre = nombre
+
+    def __str__(self):
+        return f'Pelicula: {self._nombre}'
 
     @property
     def nombre(self):
