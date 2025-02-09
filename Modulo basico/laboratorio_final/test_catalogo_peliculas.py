@@ -1,5 +1,6 @@
 from dominio.pelicula import Pelicula
 from servicio.catalogo_peliculas import CatalogoPelicula as cp
+
 seleccion = None
 
 while seleccion != 4:
@@ -13,7 +14,12 @@ while seleccion != 4:
 
         if seleccion == 1:
             nombre_pelicula = input('Proporciona el nombre de la pelicula: ')
-            pelicula = Pelicula()
+            pelicula = Pelicula(nombre_pelicula)
+            cp.agregar_pelicula(pelicula)
+        elif seleccion == 2:
+            cp.listar_pelicula()
+        elif seleccion == 3:
+            cp.eliminar()
     except Exception as e:
         print(f'Ocurrio un error {e}')
         seleccion = None

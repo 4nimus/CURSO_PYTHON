@@ -1,0 +1,11 @@
+{
+    "python.analysis.extraPaths": [
+        "./Modulo basico/laboratorio_final/dominio",
+        "./Modulo basico/laboratorio_final/servicio"
+    ],
+    "cSpell.words": [
+        "catalogo",
+        "pelicula",
+        "peliculas"
+    ]
+}
