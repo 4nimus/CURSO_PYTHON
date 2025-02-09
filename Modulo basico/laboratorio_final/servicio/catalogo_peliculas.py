@@ -1,6 +1,7 @@
 import os
-from ..dominio.pelicula import Pelicula
-class CatalogoPelicula(Pelicula):
+from laboratorio_final.dominio import pelicula
+
+class CatalogoPelicula(pelicula.Pelicula):
 
     ruta_archivo = 'pelicula.txt'
 
@@ -11,11 +12,11 @@ class CatalogoPelicula(Pelicula):
 
     @classmethod
     def listar_pelicula(cls):
-         with open(cls.ruta_archivo, 'r', encoding='utf9') as archivo:
+         with open(cls.ruta_archivo, 'r', encoding='utf8') as archivo:
               print('catalogo de peliculas'.center(50,'-'))
               print(archivo.read())
 
     @classmethod
-    def eliminar(self):
+    def eliminar(cls):
         os.remove(cls.ruta_archivo)
         print(f'Archivo Eliminando: {cls.ruta_archivo}')
